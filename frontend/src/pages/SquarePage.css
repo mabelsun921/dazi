@@ -1,0 +1,280 @@
+/* SquarePage Styles - 活动广场页面独立样式 */
+
+.square-page {
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+.square-search-container {
+  background: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.square-search-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.square-search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 24px;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.square-search-input:focus {
+  outline: none;
+  border-color: #ff4757;
+  background: white;
+}
+
+.square-activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.square-activity-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.square-activity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.square-activity-card.expanded {
+  position: relative;
+}
+
+.square-activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.square-activity-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  margin-right: 12px;
+}
+
+.square-activity-content {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.square-activity-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #999;
+  flex-wrap: wrap;
+}
+
+.square-activity-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.square-activity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.square-activity-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f0f0f0;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #666;
+}
+
+.square-activity-tag.primary {
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+}
+
+.square-activity-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.square-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.square-user-details {
+  flex: 1;
+}
+
+.square-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.square-user-meta {
+  font-size: 12px;
+  color: #999;
+}
+
+.square-match-ring {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.square-match-ring svg {
+  transform: rotate(-90deg);
+}
+
+.square-match-ring-bg {
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 6;
+}
+
+.square-match-ring-progress {
+  fill: none;
+  stroke: url(#matchGradient);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.square-match-ring-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.square-activity-expanded {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  animation: expandIn 0.3s ease;
+}
+
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.square-activity-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.square-activity-detail-row strong {
+  color: #333;
+  min-width: 60px;
+}
+
+.square-activity-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.square-btn-join {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.square-btn-join:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.square-btn-join:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.square-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.square-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.square-empty-text {
+  font-size: 16px;
+}
+
+.square-loading {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.square-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f0f0f0;
+  border-top-color: #ff4757;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

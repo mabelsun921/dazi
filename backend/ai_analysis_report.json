@@ -1,0 +1,15 @@
+{
+  "match_score_accuracy": 72.5,
+  "activity_score_accuracy": 72.08333333333333,
+  "average_accuracy": 72.29166666666666,
+  "test_cases": {
+    "match_pairs": 12,
+    "activity_pairs": 12
+  },
+  "recommendations": [
+    "The AI matching system shows promising results with an average accuracy of 72.29%",
+    "The match score accuracy is 72.50%, which indicates good performance in matching users",
+    "The activity score accuracy is 72.08%, which suggests effective matching between users and activities",
+    "Further improvements could be made by fine-tuning the prompt templates and incorporating more features"
+  ]
+}
